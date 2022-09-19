@@ -5,9 +5,9 @@
 
 For this project, I used NLP algorithms, vectorizers, along with pipelines, cross validation and grid searches to create the most effective model to predict a binary class (positive emotion and negative emotion) pertaining to Apple and Google product sentiment via Twitter data.
 
-   - Link to Technical Notebook:
-   - Link to final presentation: 
-   - Link to original data sources: 
+   - Link to Technical Notebook: https://github.com/AliRampur/Phase-4-Project/blob/main/Phase%204%20Project%20Notebook.ipynb
+   - Link to final presentation: https://github.com/AliRampur/Phase-4-Project/blob/main/presentation.pdf
+   - Link to original data sources: https://github.com/AliRampur/Phase-4-Project/tree/main/data
    
 # 2. Business Problem
 
@@ -58,12 +58,12 @@ In this first step, I analyzed tweets and the associated products and company (A
     ### Visualization:
    Here is a bar graph of the emotion types by company (Google, Apple, na)
    
-   ![image]()
+   ![image](https://github.com/AliRampur/Phase-4-Project/blob/main/graphs/BarGraph.png)
    
    
    Here is a line graph of the most common tokens:
    
-   ![image]()
+   ![image](https://github.com/AliRampur/Phase-4-Project/blob/main/graphs/WordCount.png)
    
    
       
@@ -95,7 +95,7 @@ After further consideration of these 3 combinations, I applied a grid search and
 
 Here is the confusion matrix on the test data:
 
-   ![image]()
+   ![image](https://github.com/AliRampur/Phase-4-Project/blob/main/graphs/ConfusionMatrix_Binary.png)
    
 
 # 5. NLP Model - Multi Class (Positive, Negative, No Emotion)
@@ -112,11 +112,15 @@ Based on the cross validation and pipeline, the most successful vectorizer / mod
   
 After further consideration of these 3 combinations, I applied a grid search and the best model seems to be tfidf_rf model:
 
-    - Y - Validation Set Accuracy Score: .666
+    - Y - Cross Validation Accuracy Score: .666
     - Y - Test Set Accuracy Score: .69
 
 
+Here is the confusion matrix on the test data:
 
+   ![image](https://github.com/AliRampur/Phase-4-Project/blob/main/graphs/ConfusionMatrix_Multi1.png)
+   
+   
 
 # 6.  NLP Model - Multi Class (6 classes: Positive, Negative, No Emotion for Apple and Google, respectively)
 
@@ -135,8 +139,8 @@ Based on the cross validation and pipeline, the most successful vectorizer / mod
   
 After further consideration of these 3 combinations, I applied a grid search and the best model seems to be cv_rf_model:
 
-    - Y - Validation Set Accuracy Score: .64
-    - Y - Test Set Accuracy Score: .60
+    - Y - Cross Validation Accuracy Score: .938
+    - Y - Test Set Accuracy Score: .945
 
 
 # 7. Recommendations / Next Steps
